@@ -1,8 +1,8 @@
 package Star_Pattern;
 
-import java.util.*;
+import java.util.Scanner;
 
-public class Mirror_Star_Tringle_Pattern {
+public class Mirror_tringle_Pattern {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
