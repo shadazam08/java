@@ -5,10 +5,10 @@ public class Count_unique_elements {
     public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        long[] arr = new long[n];
-        HashSet<Long> hs = new HashSet<Long>();
+        int[] arr = new int[n];
+        HashSet<Integer> hs = new HashSet<>();
         for(int i = 0; i < n; i++){
-            arr[i] = sc.nextLong();
+            arr[i] = sc.nextInt();
             hs.add(arr[i]);
         }
         // int ans = hs.size();
