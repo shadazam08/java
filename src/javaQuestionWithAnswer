@@ -1,0 +1,981 @@
+Write a program that creates integer array of 10 elements, accepts values of arrays and then displays the values.
+import java.util.*;
+public class arrayDisplay
+{
+   public static void main(String[] args)
+   {
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter 10 array elements");
+      int Arr[] = new int[10];
+      for(int i = 0; i < Arr.length; i++)
+          Arr[i] = sc.nextInt();
+      System.out.println("Array: ");
+      for(int j = 0; j < Arr.length; j++)
+         System.out.print(Arr[j]);
+   }
+}
+Write a program that creates integer array of 10 elements, accepts values of arrays and Print the array in reverse
+import java.util.*;
+public class arrayReverse
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter 10 array elements");
+        int Arr[] = new int[10];
+        for(int i = 0; i < Arr.length; i++)
+            Arr[i] = sc.nextInt();
+        System.out.println("Original Array: ");
+        for(int j = 0; j < Arr.length; j++)
+            System.out.print(Arr[j]);
+        System.out.println("Reverse Array: ");
+        for (int k = Arr.length-1; k >= 0; k--)
+            System.out.print(Arr[k] + " ");
+    }
+}
+Write a program that creates integer array of 10 elements, accepts values of arrays and Find Sum, Average, Min, Max.
+import java.util.*;
+public class SumAverageMinMax
+{
+    public static void main(String[] args)
+    {
+       int sum = 0, max, min;
+       double average;
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter 10 array elements");
+       int Arr[] = new int[10];
+       for(int i = 0; i < Arr.length; i++)
+          Arr[i] = sc.nextInt();
+       System.out.println("Array: ");
+       max= Arr[0];
+       min= Arr[0];
+       for(int j = 0; j < Arr.length; j++) {
+         if (min > Arr[j]) {
+            min = Arr[j];
+         }
+         if (max < Arr[j]) {
+            max = Arr[j];
+         }
+         sum += Arr[j];
+       }
+       average = (double) sum / Arr.length;
+       System.out.println("sum: " + sum);
+       System.out.println("min: " + min);
+       System.out.println("max: " + max);
+       System.out.println("average : "+average);
+   }
+}
+Write a program that creates integer array of 10 elements, accepts values of arrays and Print only even numbers in the array.
+import java.util.*;
+public class evenNumbers
+{
+   public static void main(String[] args)
+   {
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter 10 array elements");
+      int Arr[] = new int[10];
+      for(int i = 0; i < Arr.length; i++)
+         Arr[i] = sc.nextInt();
+      System.out.println("Even Numbers: ");
+      for(int j = 0; j < Arr.length; j++){
+         if(Arr[j]%2==0){
+            System.out.println(Arr[j]);
+         }
+      }
+   }
+}
+Write a program that creates integer array of 10 elements, accepts values of arrays and Find sum of all odd numbers
+import java.util.*;
+public class sumOfAllOdd
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int sumOdd=0;
+        System.out.println("Enter 10 array elements");
+        int Arr[] = new int[10];
+        for(int i = 0; i < Arr.length; i++)
+           Arr[i] = sc.nextInt();
+        for(int j = 0; j < Arr.length; j++){
+           if(Arr[j]%2!=0){
+             sumOdd = sumOdd + Arr[j];
+           }
+        }
+        System.out.println("Sum of odd numbers: "+sumOdd);
+   }
+}
+Write a program that creates integer array of 10 elements, accepts values of arrays and Find sum of all odd numbers
+import java.util.*;
+public class age
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int below18=0, in18And60= 0, above60=0;
+        System.out.println("Enter 10 array elements");
+        int Arr[] = new int[10];
+        for(int i = 0; i < Arr.length; i++)
+           Arr[i] = sc.nextInt();
+        for(int j = 0; j < Arr.length; j++){
+           if(Arr[j]<18)
+               below18 = below18 + 1;
+           else if(Arr[j]>=18 && Arr[j]<60)
+               in18And60 = in18And60 + 1;
+           else
+               above60 = above60 + 1;
+        }
+        System.out.println("Sum of odd numbers: "+below18);
+        System.out.println("Sum of odd numbers: "+in18And60);
+        System.out.println("Sum of odd numbers: "+above60);
+   }
+}
+Write a program that creates integer array of 10 elements, accepts values of arrays and Search for a number in an array of 10
+import java.util.*;
+public class findElement
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int i, j=0, flag=0, x;
+        System.out.println("Enter 10 array elements");
+        int Arr[] = new int[10];
+        for( i = 0; i < Arr.length; i++)
+           Arr[i] = sc.nextInt();
+           System.out.println("Enter the element you want to find:: ");
+           x = sc.nextInt();
+           for( j = 0; j < Arr.length; j++)
+           {
+              if(Arr[j] == x)
+              {
+                  flag = 1;
+                  break;
+              }
+              else
+              {
+                  flag = 0;
+              }
+           }
+           if(flag == 1)
+           {
+               System.out.println("Element found at position:"+(j + 1));
+           }
+           else
+           {
+               System.out.println("Element not found");
+           }
+     }
+}
+Write a program which takes in 10 values and creates another array which has cubes of the values (or factorial) and prints it.
+import java.util.*;
+public class cubeOfArray
+{
+     public static void main(String[] args)
+     {
+         Scanner sc = new Scanner(System.in);
+         int cube[]= new int[10];
+         System.out.println("Enter 10 array elements");
+         int Arr[] = new int[10];
+         for(int i = 0; i < Arr.length; i++)
+             Arr[i] = sc.nextInt();
+         System.out.println("Cube of Numbers :");
+         for(int j = 0; j < Arr.length; j++)
+         {
+            cube[j] = Arr[j]*Arr[j]*Arr[j];
+            System.out.println(cube[j]);
+         }
+    }
+}
+//Write an array which takes in roll no and marks in 3 subjects for 10 students. Print the roll no, total marks and average for all students.
+import java.util.*;
+public class studentSub
+{
+     public static void main(String[] args)
+     {
+         Scanner sc = new Scanner(System.in);
+         System.out.println("Enter number of students: ");
+         int n = sc.nextInt();
+         int rollNo[] = new int[n];
+         int s1[] = new int[n];
+         int s2[] = new int[n];
+         int s3[] = new int[n];
+         double total[] = new double[n];
+         double avg[] = new double[n];
+         for (int i = 0; i < n; i++) {
+             System.out.println("Enter student " + (i+1) + " details:");
+             System.out.print("Roll No: ");
+             rollNo[i] = sc.nextInt();
+             System.out.print("Subject 1 Marks: ");
+             s1[i] = sc.nextInt();
+             System.out.print("Subject 2 Marks: ");
+             s2[i] = sc.nextInt();
+             System.out.print("Subject 3 Marks: ");
+             s3[i] = sc.nextInt();
+             total[i]= (s1[i] + s2[i] + s3[i]);
+             avg[i] = total[i]/ 3.0;
+         }
+         System.out.println("Roll No \t Total \t Average ");
+         for (int i = 0; i < n; i++) {
+            System.out.println(rollNo[i] + "\t" + total[i] + "\t" + avg[i]);
+        }
+    }
+}
+Write a program to take in 10 values and print only those nos which are prime.
+import java.util.*;
+public class primeArray
+{
+    public static void main(String[] args)
+    {
+       Scanner sc = new Scanner(System.in);
+       int count=0;
+       int arr[] = new int[10];
+       System.out.println("Enter 10 array elements");
+       for(int i = 0; i < arr.length; i++)
+          arr[i] = sc.nextInt();
+       System.out.print("prime numbers:");
+       for (int i = 0; i < arr.length; i++) {
+          int j = 2;
+          int p = 1;
+          while (j < arr[i]) {
+             if (arr[i] % j == 0) {
+                p = 0;
+                break;
+             }
+             j++;
+          }
+          if (p == 1) {
+             System.out.print(" " + arr[i]);
+          }
+      }
+   }
+}
+Write a program which generates 30 terms of Fibonacci no in an array and then prints it.
+public class fibonacciArray
+{
+   public static void main(String[] args)
+   {
+      long[] fibonacci = new long[30];
+      fibonacci[0] = 1;
+      fibonacci[1] = 1;
+      for(int i=2; i < fibonacci.length; i++){
+          fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];
+      }
+      System.out.println("Fibonacci Series upto 30 ");
+      for (int i = 0; i < fibonacci.length; i++) {
+          System.out.println(fibonacci[i] + " ");
+      }
+   }
+}
+Write a program to initialize a single dimensional array of 8 integers. Print array elements along with the indexes of each element and square of each element in three columns.
+public class Array1
+{
+   static int A[ ] = {4, 5, 6, 11, 2, 6, 10, 12, 9 };
+   public void main()
+   {
+      System.out.println("Index number \t Element at index \t Square of element");
+      for (int x =0; x<8; x++)
+          System.out.println("\t" + x + "\t\t"+ A[ x]+ "\t\t\t" +(A[ x]*A[ x] ));//Print values
+   }
+}
+Write a program to create a single dimensional array of 20 integers. Print array element in a single line with one space between each element. Also print sum of elements present at even indexes and sum of elements present at odd indexes in array.
+import java.io.*;
+import java.util.*;
+public class Array2
+{
+    int ar[] = new int[ 20 ];
+    public void input()
+    {
+        Scanner inp = new Scanner(System.in);
+        int sumeven = 0, sumodd = 0;
+        for(int i =0; i<20; i++)
+        {
+            System.out.print("Input a number: ");
+            ar[i]= inp.nextInt();
+        }
+        System.out.println("The elements of array are:");
+        for( int i = 0; i<20; i++)
+        {
+            System.out.print(ar[i]+" ");
+            if( i % 2 ==0)
+            {
+                sumeven = sumeven + ar[i];
+            }
+            else
+            {
+                sumodd = sumodd + ar[i];
+            }
+        }
+        System.out.println("\nSum of elements present at even indexes = "+sumeven );
+        System.out.println("Sum of elements present at odd indexes = " +sumodd);
+
+Design a function void print( ) with a single dimensional array x[ ] and n (as size of the array) as function arguments. The function calculates sum of only single digit and sum of only double digit elements from the array. Design a main() function to input size of the array ‘len' and single dimensional array of size 'len', and print the required result by invoking the function print( ).
+import java.util.Scanner;
+public class Array3
+{
+    public void print( int x[], int n)
+    {
+       int sum1 = 0, sum2 = 0;
+       for(int v = 0; v<n; v++ )
+       {
+          if( x[ v] >0 && x[ v] <= 9)
+              sum1 = sum1 + x[ v];
+          else if ( x[ v] >= 10 && x[ v] <= 99)
+              sum2 = sum2 + x[v];
+       }
+       System.out.println("Sum of single digit numbers = "+ sum1 );
+       System.out.println("Sum of double digit numbers = "+ sum2 );
+    }
+    public void main( String args[])
+    {
+       Scanner inp = new Scanner(System.in);
+       int len;
+       int ar[] = new int[100];
+       System.out.print("Enter the size of array: ");
+       len = inp. nextInt( );
+       for (int i = 0; i < len; i++)
+       {
+          System.out.print("Input a number: ");
+          ar[ i ]= inp.nextInt();
+       }
+       print( ar, len );
+   }
+}
+Write a program to initialize the following character arrays and print a suitable message after checking the arrays whether the two arrays are identical or not. Make suitable use of Boolean data type. X[] =('m', 'n', 'o', 'p'} and Y[] =('m', 'n', 'o', 'p' }
+X[] =('m', 'n', 'o', 'p'} and
+Y[] =('m', 'n', 'o', 'p' }
+public class Array7
+{
+   public void Check()
+   {
+       char X[ ]= {'m', 'n', 'o', 'p' };
+       char Y[ ] = { 'm', 'n', 'o', 'p' };
+       int size1 = X. length;
+       int size2 = Y. length;
+       boolean result = true;
+
+       System.out.println("Elements of array X = ");
+       for(int v = 0; v< size1; v++)
+           System.out.print(X[ v ]+"\t");
+
+       System.out.println("\nElements of array Y = ");
+       for(int v = 0; v< size2; v++){
+           System.out.print(Y[ v ]+"\t");
+
+       if( size1 != size2)
+           System.out.println("The arrays are not identical, because sizes of both the arrays are not same ");
+      else
+     {
+        for(int v =0; v< size1; v++)
+        {
+           if( X[ v]!= Y[v])
+           {
+              result = false;
+              break;
+           }
+        }
+        if( result == true)
+            System.out.println("\nBoth the arrays are identical ");
+        else
+            System.out.println("The given arrays are not identical, because the elements are not same");
+     }
+  }
+}
+Write a program to accept the year of graduation from school as an integer value from the users . Using the Binary search technique on the sorted array of integers given below . Output the message “record exists" if the value input is located in the array and if not output the message record does not exits”.
+{1982, 1987 ,1993, 1996 ,1999, 2003, 2006 ,2007 ,2009, 2010,}
+import java.util.Scanner;
+public class BinarySearch
+{
+   public static void main (String [] arg)
+   {
+      int a[ ] = { 1982,1987,1993,1996,1999,2003,2006,2007,2009,2010};
+      Scanner scan =new Scanner(System.in);
+      System.out.println("Please enter a year of graduation to search:");
+      int year = scan.nextInt();
+      int flag =0,mid,lb =0, ub =a.length -1;
+      do
+      {
+         mid =(lb +ub ) /2;
+         if (a[mid]== year)
+         {
+            System.out.println("Record exists");
+            flag =1 ;
+            break;
+         }
+         else if (a[mid]<year)
+            lb =mid +1;
+         else
+            ub =mid-1;
+      }
+      while (lb <= ub);
+         if (flag == 0)
+            System.out.println ("Record does not exist");
+   }
+}
+Write a program to input 10 integer elements in an array and sort them in descending order using the bubble sort technique
+import java.util.Scanner;
+public class bubbleshort
+{
+    public static void main (String[] arges)
+    {
+        int a []= new int[10];
+        Scanner scan = new Scanner (System.in);
+        System.out.println ("Enter 10 integers");
+        for (int i =0;i < 9 ;i++)
+            a[i] = scan.nextInt() ;
+        int t =0;
+        for ( int i =1; i <= 9;i++)
+        {
+            for (int j =0; j<=8;j ++)
+            {
+                 if (a[j] < a[j+1])
+                 {
+                     t= a[j];
+                     a[j] =a [j + 1];
+                     a[j+1] =t ;
+                 }
+            }
+        }
+        System.out.println("sorted element are:");
+        for (int k=0; k < 9; k++)
+             System.out.println(a[k]);
+    }
+}
+write a program to generate and store the 20 term of Fibonacci series in an array.
+fibArr [20]: 0,1,1,2,3,5,8,13,21,34,…
+Finally print the sum of all element contained in fibArr [20]
+public class fibonaccilist
+{
+   public static void main ( String [] arge)
+   {
+      int fibArr []=new int [20];
+      int a =5,b=8;
+      int sum =0,c=0 ;
+      fibArr[0]=a;
+      fibArr[1] =b ;
+      for(int i= 2; i <20; i++)
+      {
+         c=a+b;
+         fibArr[k]=c;
+         a=b;
+         b=c;
+      }
+      for(int i=0; i < 20; i ++)
+      {
+          System .out. print (fibArr[i]+",");
+          sum =sum + fibArr [i];
+      }
+      System.out.println("");
+      System.out.println ("sum of Fibonacci series =" +sum);
+   }
+}
+Initialize a one dimension array with first nine natural numbers and then display then in the following format.
+1       2       3
+4       5       6
+7       8       9
+public class OneDimensionArray
+{
+    public static void main (String[] args )
+    {
+        int a[]= {1,2,3,4,5,6,7,8,9};
+        int k =0 ;
+        for (int i =1;i<=3;i++)
+        {
+            for (int j=k;j<=k+2;j++)
+            System.out.print(a[j] +" ");
+            System.out.println ( );
+            k=k+3;
+        }
+    }
+}
+Write a program to accept the name of 10 cities in a single dimension string array and their STD ( subscribers Trunk Dialling ) codes in another single dimension integer array search for a name of a city input by the users in the list .if found .display search successful and print the name of the city along with its STD code or else display the message search unsuccessful .no such city in the list”
+import java.io.*;
+public class SearchSTD
+{
+    public static void main(String args[])throws IOException
+    {
+        BufferedReader br = new BufferedReader(new
+        InputStreamReader(System.in));
+        String names[] = new String[10];
+        int codes[] = new int[10];
+        int i = 0;
+        for(; i < names.length; i++)
+        {
+           System.out.print("City: ");
+           names[i] = br.readLine();
+           System.out.print("STD code: ");
+           codes[i] = Integer.parseInt(br.readLine());
+        }
+        System.out.print("City to search: ");
+        String key = br.readLine();
+        for(i = 0; i < names.length; i++)
+        {
+           if(key.equalsIgnoreCase(names[i]))
+              break;
+        }
+        if(i < names.length)
+        {
+           System.out.println("Search successful");
+           System.out.println(names[i] + " - " + codes[i]);
+        }
+        else
+          System.out.println("Search unsuccessful, no such city in the list");
+    }
+}
+Write a program to input and store the weight of ten people. Sort and display them in descending order using the Selection sort technique.
+import java.util.Scanner;
+public class SelectionSort
+{
+    static int weight[] = new int[ 10 ];
+    public static void main(String args[ ])
+    {
+       Scanner buf = new Scanner (System.in );
+       int n= 10;
+       int i,j, place, big, temp;
+       System.out.println("Input weight of ten people in the array: ");
+       for( i = 0; i<n; i++)
+       {
+          System.out.print("Enter the weight: ");
+          weight[i] = buf. nextInt( );
+      }
+      System.out.println("Output:");
+      for(i = 0; i <n-1; i++)
+      {
+         big = weight[ i ];
+         place = i;
+         for(j= i+1;j<n; j++)
+         {
+            if( weight[j]> big )
+            {
+               big = weight[j];
+               place= j;
+            }
+         }
+         temp = weight[ i];
+         weight[ i]= weight[ place ];
+         weight[ place ] = temp;
+      }
+      System.out.println("\nWeights in descending order are:");
+      for( i=0; i<n; i++)
+      {
+          System.out.print(weight[ i ]+"\t");
+      }
+   }
+}
+Write a program to perform binary search on a list of integers given below, to search for an element input by the users if is found display the element along with its position, otherwise display the message “search element not found”. 5, 7, 11, 15, 20, 30, 45, 89, 97
+import java.io.*;
+import java.util.* ;
+public class binary
+{
+   public static void main ( ) throws IOException
+   { // array element are in ascending order
+      int x [] = { 5, 7, 11, 15, 20, 30, 45, 89, 97};
+      System.out.println ("Enter element to search in the list" );
+      Scanner buf = new Scanner (System.in);
+      int elem = buf.nextInt ();
+      // Initialise lower bound and upper bound
+      int LB =0, UB =9; // 10 elements
+      int mid=0;
+      boolean flag =false;
+      do
+      {
+         mid = (LB +UB) /2;
+         if (elem == x [mid])
+         {
+            System.out.println("Element is :" + elem);
+            System .out. println("Found at index:" + mid );
+            System .out.println("Position in list:" + (mid+ 1));
+            flag = true;
+            break;
+         }
+         else if ( elem < x [mid])
+         {
+             UB = mid-1;
+         }
+         else
+            LB=mid +1;
+         } while(LB <= UB);
+         if(flag == false)
+             System.out.print("Search element not found");
+     }
+}
+Write an array which takes in roll no and marks in 3 subjects for 10 students. Print the roll no, total marks and average for all students
+import java.util.Scanner;
+public class Student
+{
+   public static void main(String[] args)
+   {
+      Scanner sc = new Scanner(System.in);
+      double r[] = new double[10];
+      double m1[] = new double[10];
+      double m2[] = new double[10];
+      double m3[] = new double[10];
+      double avg[] = new double[10];
+      double sum[] = new double[10];
+      int marks=0;
+      for(int i=0; i<10; i++){
+         System.out.println("Enter toll no");
+         r[i]=sc.nextDouble();
+         System.out.println("Enter marks in sub");
+         m1[i]=sc.nextDouble();
+         System.out.println("Enter marks in sub");
+         m2[i]=sc.nextDouble();
+         System.out.println("Enter marks in sub");
+         m3[i]=sc.nextDouble();
+      }
+      for(int i= 0; i<10; i++){
+        sum[i]=m1[i]+m2[i]+m3[i];
+        avg[i]=sum[i];
+      }
+      for(int i= 0; i<10; i++){
+        System.out.println("roll no: "+r[i]);
+        System.out.println("total marks: "+sum[i]);
+        System.out.println("average: "+r[i]);
+     }
+   }
+}
+Write a program to create a single dimensional array of 10 integers. Print sum of elements present at even indexes and sum of elements present at odd indexes in array.
+import java.util.Scanner;
+public class sum
+{
+   public static void main(String args[])
+   {
+       Scanner sc= new Scanner(System.in);
+       int arr[]= new int[10];
+       int oddsum=0;
+       int evensum=0;
+       System.out.println("Input array: ");
+       for(int i=0; i<arr.length;i++)
+       {
+         System.out.println("Input number: ");
+         arr[i]= sc.nextInt();
+       }
+
+       for(int i=0;i<(arr.length);i++)
+       {
+          if(i%2==0)
+             evensum=evensum+arr[i];
+          else
+             oddsum=oddsum+arr[i];
+       }
+       System.out.println("sum of even indexes elements : "+evensum);
+       System.out.println("sum of odd indexes elements : "+oddsum);
+   }
+}
+Write a program to take in 10 values from user in a single dimensional array. Print only numbers which have 4 digits.
+import java.util.Scanner;
+public class digit
+{
+   public static void main(String args[])
+   {
+      Scanner sc= new Scanner(System.in);
+      int arr[]= new int[10];
+      int sum=0;
+      for(int x=0; x<10; x++)
+      {
+         System.out.println("Input number: ");
+         arr[x]= sc.nextInt();
+      }
+      for(int i=0; i<10; i++)
+      {
+         if(arr[i]>=1000 && arr[i]<=9999)
+            System.out.println(arr[i]);
+      }
+   }
+}
+Write a program to merge 2 single dimensional arrays of size 5 into one and then sort it in descending order using bubble sort technique.
+import java.util.Scanner;
+
+public class merge
+
+{
+
+   public static void main(String args[])
+
+   {
+
+      int count = 0;
+
+      int a1[]={11,32,56,13,15};
+
+      int a2[]={10,40,23,48,85};
+
+      int sum=0;
+
+      int a3[]= new int[a1.length+a2.length];
+
+      for(int i=0; i <a1.length;i++)
+      {
+         a3[i]=a1[i];
+         a3[5+i] = a2[i];
+      }
+
+      int temp=0;
+
+      for(int x=1; x <9;x++)
+      {
+          for(int j=0; j <8; j++)
+          {
+              if(a3[j]<a3[j+1])
+              {
+                   temp=a3[j];
+                   a3[j]=a3[j+1];
+                   a3[j+1]=temp;
+              }
+         }
+     }
+
+     System.out.println("Sorted array: ");
+
+     for(int k=0; k <9;k++)
+     {
+         System.out.print(a3[k]+" ");
+     }
+
+  }
+
+}
+Write a program which takes in 10 people’s age and gives no of people who are < 18, 18-60, >60
+import java.util.Scanner;
+public class age
+{
+   public static void main(String args[])
+   {
+       Scanner sc= new Scanner(System.in);
+       int a[]= new int[10];
+       for(int i=0; i<10; i++)
+       {
+           System.out.println("age: ");
+           a[i]= sc.nextInt();
+       }
+       int c1= 0;
+       int c2= 0;
+       int c3= 0;
+       for(int i=0; i <a.length;i++)
+       {
+          if(a[i]<18)
+          {
+             c1++;
+          }
+          else if(a[i]>=18 && a[i]<=60)
+          {
+             c2++;
+          }
+          else
+          {
+             c3++;
+          }
+       }
+       System.out.println("no of people below 18 age: "+c1);
+       System.out.println("no of people between 18 and 60 age: "+c2);
+       System.out.println("no of people above 60 age: "+c3);
+   }
+}
+Write a program that creates integer array of 10 elements, accepts values of arrays and then displays the values.
+import java.util.Scanner;
+public class Array
+{
+   public static void main(String args[])
+   {
+      Scanner sc= new Scanner(System.in);
+      int arr[]= new int[10];
+
+      for(int i=0; i<arr.length; i++)
+      {
+         System.out.println("Input number: ");
+         arr[i]= sc.nextInt();
+      }
+      for(int j=0; j <10; j++)
+      {
+          System.out.println(arr[j]+"");
+      }
+   }
+}
+Write a program that creates integer array of 10 elements, accepts values of arrays and Print the array in reverse.
+import java.util.Scanner;
+public class Array
+{
+   public static void main(String args[])
+   {
+      Scanner sc= new Scanner(System.in);
+      int arr[]= new int[10];
+
+              for(int i=0; i<arr.length; i++)
+             {
+
+                   System.out.println(" Enter Number: ");
+
+                   arr[i]= sc.nextInt();
+
+              }
+              for (int i = arr.length-1; i >= 0; i--)
+             {
+                      System.out.print(arr[i] + " ");
+              }
+       }
+}
+Write a program that creates integer array of 10 elements, accepts values of arrays and Find Sum, Average, Min, Max.
+import java.util.Scanner;
+public class minMaxArray
+{
+  public static void main (String args[]){
+  Scanner sc = new Scanner(System.in);
+  int arr[ ] = new int[10];
+  int sum=0;
+  double avg=1;
+
+  for (int i=0; i<arr.length; i++)
+  {
+     System.out.print("Enter array element: ");
+     arr[i]=sc.nextInt();
+  }
+  int max=arr[0];
+  int min= arr[0];
+  for(int i=0; i<arr.length; i++ )
+  {
+     if(arr[i]>max)
+     {
+        max = arr[i];
+     }
+     else if (arr[i]<min)
+     {
+        min = arr[i];
+     }
+     sum = sum + arr[i];
+  }
+  avg = (double)sum/ arr.length;
+  System.out.println("Max:"+max);
+  System.out.println("Min:"+min);
+  System.out.println("Sum of all elements: " + sum);
+  System.out.println("avg of all elements : " + avg);
+}
+Write a program that creates integer array of 10 elements, accepts values of arrays and Print only even numbers in the array.
+public class EvenElement
+{
+   public static void main(String args[])
+   {
+      Scanner sc= new Scanner(System.in);
+      int arr[]= new int[10];
+
+      for(int i=0; i<arr.length; i++)
+      {
+         System.out.println("Input number: ");
+         arr[i]= sc.nextInt();
+      }
+      for(int i=0;i<arr.length;i++){
+        if(arr[i]%2==0){
+           System.out.println(arr[i]);
+        }
+     }
+  }
+}
+Write a program that creates integer array of 10 elements, accepts values of arrays and Print sum of odd numbers in the array.
+public class EvenElement
+{
+   public static void main(String args[])
+   {
+      Scanner sc= new Scanner(System.in);
+      int arr[]= new int[10];
+      int OddSum=0;
+      System.out.println("Input array: ");
+      for(int i=0; i<arr.length; i++)
+      {
+         arr[i]= sc.nextInt();
+      }
+      for(int j = 0; j < arr.length; j++)
+      {
+         if(arr[j] % 2 != 0)
+         {
+             OddSum = OddSum + arr[j];
+         }
+      }
+      System.out.println("\n The Sum of Odd Numbers :" + OddSum);
+   }
+}
+Write a program which takes in 10 values and creates another array which has cubes of the values and prints it.
+import java.util.Scanner;
+public class cube
+{
+  public static void main(String args[])
+  {
+    int cube [ ] = new int[10];
+    int a[ ] = new int[10];
+    Scanner sc= new Scanner(System.in);
+    for (int i=0; i<a.length;i++)
+    {
+       System.out.println("Enter array element: ");
+       a[i]=sc.nextInt();
+    }
+    System.out.println("Cube of Numbers :-");
+    for(int i=0;i<a.length;i++)
+    {
+       cube[i] = a[i]*a[i]*a[i];
+       System.out.println(cube[i]);
+    }
+  }
+}
+Write an array which takes in roll no and marks in 3 subjects for 10 students. Print the roll no, total marks and average for all students.
+import java.util.Scanner;
+public class marks
+{
+   public static void main(String[] args)
+  {
+     Scanner sc= new Scanner(System.in);
+     int r_No[]= new int[10];
+     int m1[]= new int[10];
+     int m2[]= new int[10];
+     int m3[]= new int[10];
+     int total[]= new int[10];
+     double avg[]= new double[10];
+
+    for(int i=0; i<r_No.length; i++)
+    {
+       System.out.println("Enter Roll No: ");
+       r_No[i]= sc.nextInt();
+       System.out.println("Enter mark1: ");
+       m1[i]= sc.nextInt();
+       System.out.println("Enter mark2: ");
+       m2[i]= sc.nextInt();
+       System.out.println("Enter mark3: ");
+       m3[i]= sc.nextInt();
+    }
+    for(int i=0; i<r_No.length; i++)
+    {
+       total[i]= m1[i]+m2[i]+m3[i];
+       avg[i]=total[i]/3.0;
+    }
+    for(int i=0; i<r_No.length; i++)
+    {
+       System.out.println(r_No[i]);
+       System.out.println(total[i]);
+       System.out.println(avg[i]);
+    }
+  }
+}
+Write a program to take in 10 values and print only those numbers which are palindrome.
+import java.util.Scanner;
+public class priem_num
+{
+   public static void main(String[] args)
+   {
+      Scanner sc= new Scanner(System.in);
+      int arr[]= new int[10];
+      System.out.println("Input array: ");
+      for(int i=0; i<arr.length; i++)
+      {
+          arr[i]= sc.nextInt();
+      }
+
+      for(int i=0; i<arr.length; i++)
+      {
+         int no = arr[i];
+         int sum=0;
+         while(no!= 0)
+         {
+            int d= no%10;
+            sum=sum*10+d;
+            no=no/10;
+         }
+         if(sum == arr[i])
+         System.out.println(arr[i]);
+      }
+   }
+}
